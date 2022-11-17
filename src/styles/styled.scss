@@ -1,0 +1,423 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #53605e;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content {
+  margin-top: 64px;
+}
+
+.card-box {
+  margin-bottom: 62px;
+  div {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #dbe5ff;
+  }
+  h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5325ea;
+    margin-bottom: 10px;
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7c89a0;
+  }
+}
+
+.button-box {
+  display: flex;
+  overflow: auto;
+  justify-content: space-between;
+  margin-top: 30px;
+  @media screen and (max-width: 480px) {
+    gap: 0 10px;
+  }
+}
+
+.slider-content {
+  height: 431px;
+  background: #f4f7ff;
+  padding-top: 45px;
+  .container {
+    @media screen and (max-width: 480px) {
+      padding: 0;
+    }
+  }
+}
+
+.slider-box {
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    max-height: 202px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #052c54;
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7c89a0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #7c89a0;
+  }
+}
+
+.slick-slide {
+  padding: 0 15px;
+}
+.slick-slider {
+  .slick-dots {
+    bottom: -30px;
+  }
+  .slick-arrow {
+    @media screen and (max-width: 480px) {
+      display: none !important;
+    }
+  }
+}
+
+.detail-content {
+  margin-top: 45px;
+  button {
+    padding: 10px 12px;
+    gap: 5px;
+    width: 102px;
+    height: 35px;
+    background: #052c54;
+    border: 1px solid #dbe5ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+  }
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+  }
+
+  .news-content {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 45px 66px;
+
+    .content-box {
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      h2 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #052c54;
+        margin-bottom: 5px;
+      }
+      h3 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #7c89a0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: 15px;
+      }
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        color: #7c89a0;
+      }
+    }
+  }
+}
+
+.news-detail {
+  text-align: center;
+  h1 {
+    margin-top: 45px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #052c54;
+    margin-bottom: 15px;
+  }
+  img {
+    max-width: 637.9px;
+    width: 100%;
+    height: 421.3px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7c89a0;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #7c89a0;
+  }
+}

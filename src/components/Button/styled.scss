@@ -1,0 +1,47 @@
+.button {
+  padding: 15px;
+  border-radius: 15px;
+  span {
+    font-family: "Inter";
+    font-style: normal;
+  }
+  &.primary {
+    background-color: #f4f7ff;
+    height: 52px;
+    span {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #052c54;
+      width: 50px;
+      height: 22px;
+    }
+  }
+  &.secondary {
+    height: 47px;
+    background-color: #fff;
+    border: 1px solid #dbe5ff;
+    border-radius: 10px;
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #052c54;
+    }
+  }
+  &.active {
+    height: 47px;
+    background-color: #052c54;
+    border: 1px solid #dbe5ff;
+    border-radius: 10px;
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
